@@ -56,7 +56,7 @@ public class Person {
     }
 
     public Remark getRemark() {
-        return remark  ;
+        return remark;
     }
 
     /**
