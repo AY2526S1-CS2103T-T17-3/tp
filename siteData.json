@@ -108,7 +108,11 @@
       "title": "User Guide",
       "headings": {
         "organ-izer-user-guide": "Organ-izer User Guide",
-        "quick-start": "Quick start"
+        "quick-start": "Quick start",
+        "features": "Features",
+        "viewing-help-help": "Viewing help : help",
+        "adding-a-recipient-add": "Adding a recipient: add",
+        "tab-completion-for-add-command": "Tab Completion for add command"
       },
       "headingKeywords": {}
     },
