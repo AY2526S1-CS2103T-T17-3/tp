@@ -112,7 +112,13 @@
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
         "adding-a-recipient-add": "Adding a recipient: add",
-        "tab-completion-for-add-command": "Tab Completion for add command"
+        "tab-completion-for-add-command": "Tab Completion for add command",
+        "listing-all-recipients-list": "Listing all recipients : list",
+        "finding-compatible-blood-types-compatible": "Finding compatible blood types: compatible",
+        "finding-recipients-by-organ-organ": "Finding recipients by organ : organ",
+        "finding-recipients-by-bloodtype-bloodtype": "Finding recipients by bloodtype : bloodtype",
+        "finding-recipients-by-priority-priority": "Finding recipients by priority : priority",
+        "finding-recipients-by-multiple-criteria-combined": "Finding recipients by multiple criteria: combined"
       },
       "headingKeywords": {}
     },
