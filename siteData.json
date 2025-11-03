@@ -78,7 +78,8 @@
         "finding-all-persons-compatible": "Finding all persons compatible",
         "finding-all-persons-satisfying-multiple-criteria": "Finding all persons satisfying multiple criteria",
         "help": "Help",
-        "command-summary": "Command summary"
+        "command-summary": "Command summary",
+        "appendix-effort": "Appendix: Effort"
       },
       "headingKeywords": {}
     },
