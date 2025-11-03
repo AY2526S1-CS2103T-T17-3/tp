@@ -129,6 +129,9 @@
       "headings": {
         "organ-izer-user-guide": "Organ-izer User Guide",
         "quick-start": "Quick start",
+        "step-1-install-java": "Step 1: Install Java",
+        "step-2-download-organ-izer": "Step 2: Download Organ-izer",
+        "step-3-run-organ-izer": "Step 3: Run Organ-izer",
         "notes-about-features": "Notes About Features",
         "features": "Features",
         "viewing-help-help": "Viewing help: help",
