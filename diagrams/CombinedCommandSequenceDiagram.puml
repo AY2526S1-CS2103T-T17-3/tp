@@ -1,60 +1,66 @@
 @startuml
 !include style.puml
 skinparam ArrowFontStyle plain
-title Detailed Sequence for CombinedCommand Execution
-
-actor User
 
 box Logic LOGIC_COLOR_T1
-participant ":LogicManager" as Logic LOGIC_COLOR
-participant ":AddressBookParser" as ABP LOGIC_COLOR
-participant ":CombinedCommandParser" as CCP LOGIC_COLOR
-participant "c:CombinedCommand" as CC LOGIC_COLOR
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":CombinedCommandParser" as CombinedCommandParser LOGIC_COLOR
+participant "c:CombinedCommand" as CombinedCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
 end box
 
 box Model MODEL_COLOR_T1
 participant "m:Model" as Model MODEL_COLOR
 end box
 
-User -> Logic : execute("combined n/Alice o/kidney b/O+")
-activate Logic
+[-> LogicManager : execute("combined n/Alice o/kidney b/O+")
+activate LogicManager
 
-' --- Parse command ---
-Logic -> ABP : parseCommand(userInput)
-activate ABP
+LogicManager -> AddressBookParser : parseCommand("combined n/Alice o/kidney b/O+")
+activate AddressBookParser
 
-ABP -> ABP : tokenize command word
+create CombinedCommandParser
+AddressBookParser -> CombinedCommandParser : parse("n/Alice o/kidney b/O+")
+activate CombinedCommandParser
 
-ABP -> CCP : parse(arguments)
-activate CCP
+create CombinedCommand
+CombinedCommandParser -> CombinedCommand
+activate CombinedCommand
 
-CCP -> CCP : build predicates\n(NameExact, OrganSubstring,\nRecipientCompatible)
+CombinedCommand --> CombinedCommandParser
+deactivate CombinedCommand
 
-' --- Create CombinedCommand ---
-create CC
-CCP -> CC : new CombinedCommand(predicate)
+CombinedCommandParser --> AddressBookParser : c
+deactivate CombinedCommandParser
 
-CCP --> ABP : command
-deactivate CCP
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+CombinedCommandParser -[hidden]-> AddressBookParser
+destroy CombinedCommandParser
 
-ABP --> Logic : command
-deactivate ABP
+AddressBookParser --> LogicManager : c
+deactivate AddressBookParser
 
-' --- Execute command ---
-Logic -> CC : execute(model)
-activate CC
+LogicManager -> CombinedCommand : execute(m)
+activate CombinedCommand
 
-CC -> Model : updateFilteredPersonList(predicate)
+CombinedCommand -> Model : updateFilteredPersonList(predicate)
 activate Model
 
-Model --> CC : filtered list
+Model --> CombinedCommand
 deactivate Model
 
-CC --> Logic : CommandResult
-deactivate CC
+create CommandResult
+CombinedCommand -> CommandResult
+activate CommandResult
 
-Logic --> User : result text + list size
-deactivate Logic
+CommandResult --> CombinedCommand
+deactivate CommandResult
 
+CombinedCommand --> LogicManager : r
+deactivate CombinedCommand
+
+[<--LogicManager
+deactivate LogicManager
 @enduml
 
