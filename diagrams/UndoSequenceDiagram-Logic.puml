@@ -14,6 +14,7 @@ end box
 [-> LogicManager : execute(undo)
 activate LogicManager
 
+create AddressBookParser
 LogicManager -> AddressBookParser : parseCommand(undo)
 activate AddressBookParser
 
@@ -26,6 +27,8 @@ deactivate UndoCommand
 
 AddressBookParser --> LogicManager : u
 deactivate AddressBookParser
+AddressBookParser -[hidden]-> LogicManager : u
+destroy AddressBookParser
 
 LogicManager -> UndoCommand : execute()
 activate UndoCommand
