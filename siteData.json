@@ -111,6 +111,8 @@
         "organ-izer-user-guide": "Organ-izer User Guide",
         "quick-start": "Quick start",
         "notes-about-features": "Notes About Features",
+        "features": "Features",
+        "viewing-help-help": "Viewing help: help",
         "adding-a-recipient-add": "Adding a recipient: add",
         "tab-completion-for-add-command": "Tab Completion for add command",
         "editing-a-recipient-edit": "Editing a recipient : edit",
@@ -127,9 +129,10 @@
         "access-last-command": "Access last command :",
         "exiting-the-program-exit": "Exiting the program : exit",
         "restore-last-search": "Restore last search",
+        "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
         "faq": "FAQ",
-        "q-how-do-i-add-a-recipient-without-a-phone-number-e-g-children-a-add-the-child-recipient-normally-but-input-his-parent-s-phone-number-instead": "Q: How do I add a recipient without a phone number, e.g. children?\nA: Add the child recipient normally, but input his parent's phone number instead.",
+        "known-issues": "Known issues",
         "command-summary": "Command summary"
       },
       "headingKeywords": {}
