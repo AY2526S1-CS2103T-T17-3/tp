@@ -69,25 +69,24 @@ If you wish to navigate this page quickly, feel free to use the **table of conte
    </box>
 3. Run **Organ-izer** by typing `java -jar organ-izer.jar` into the terminal and pressing <kbd>Enter</kbd>. <br>
 
-
 A screen similar to the one below should be visible after a few seconds. Note that the app contains some sample data.<br>
 ![Ui](images/Ui.png)
 <br>
 
-7. To start, try typing `list` in the command box at the top and press enter to execute it.<br>
+4. To start, try typing `list` in the command box at the top and press enter to execute it.<br>
    **If it is your first time using the application, it will not display any data**.
 
-8. To add a new user, try typing `
+5. To add a new user, try typing `
 add n/Alice Pauline p/94351253 e/alice@example.com a/123, Jurong West Ave 6, #08-111 o/kidney b/O+ r/1 t/friends
 `
-9. A list of other commands you can try:
+6. A list of other commands you can try:
     * `summary` : Provides a brief statistical summary of recipients.
 
     * `clear` : Deletes all patients.
 
     * `exit` : Exits the app.
 
-10. `Organ-izer` has many other useful commands to help with organ donation coordination. Details about all available commands can be found in the [Features](#features) section below.
+7. `Organ-izer` has many other useful commands to help with organ donation coordination. Details about all available commands can be found in the [Features](#features) section below.
 
 <box type="info" seamless>
 <markdown>
@@ -266,12 +265,14 @@ Examples:
 *  `edit 2 n/Betsy Crower t/` Edits the name of the 2nd recipient to be `Betsy Crower` and clears all existing tags.
 * `edit 1 en/ ep/` removes the emergency contact from the 1st recipient.
 <br>
+
 ### Listing all recipients : `list`
 
 Shows a list of all recipients in the Organ-izer.
 
 Format: `list`
 <br>
+
 ### Finding recipients by name: `search`
 
 Finds recipients in **Organ-izer** whose names contain all the given keywords, in any order.
@@ -431,7 +432,8 @@ Examples:
 * Double check before proceeding.
 </markdown>
 </box>
-Deletes *all* recipients from **Organ-izer**.
+
+Deletes **all** recipients from **Organ-izer**.
 
 Format: `clear`<br>
 
@@ -481,7 +483,7 @@ After reopening the app, search results from the last search command will be sho
 <markdown>
 **Note:** 
 * This restoration only applies to the `search` command, and does not apply to other commands that find recipients such as `compatible` or `bloodtype`.
-* Calling `list` after `search KEYWORD` will **undo the search filter**, so closing and reopening the app will **not* restore the search result.
+* Calling `list` after `search KEYWORD` will **undo the search filter**, so closing and reopening the app will **not** restore the search result.
 </markdown>
 </box>
 <br>
