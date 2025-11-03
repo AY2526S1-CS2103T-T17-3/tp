@@ -1,12 +1,12 @@
 @startuml
 start
 
-:Register donor-recipient pairs;
+:Add donor-recipient pairs;
 :Store data in database;
-:Run compatibility algorithm;
+:Run compatibility engine algorithm;
 
 if () then ([Matches Found])
-  :Generate possible chains;
+  :Display possible swaps;
   if () then ([Approved])
     :Update records;
   else ([Not Approved])

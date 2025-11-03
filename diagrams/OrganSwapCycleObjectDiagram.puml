@@ -47,7 +47,7 @@ object "<u>PairC:DonorRecipientPair" as pairC {
   recipient = "Daniel Wong"
 }
 
-object "<u>:MatchCycle" as match3way {
+object "<u>swap3way:Swap" as match3way {
   chainType = "CYCLE"
   status = "APPROVED"
   description = "3-way kidney exchange chain"
